@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFF;
+}
+
+/* Style the header  */
+header {
+  
+  padding: 30px;
+  font-size: 15px;
+  color: black;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  
+}
+
+.search-container {
+    text-align: center;
+    padding: 16px;
+    position: relative; 
+    margin-bottom: 50px;
+  }
+  .logo {
+    max-width: 30%;
+    height: auto;
+  }
+ 
+  .search-box {
+    position: relative; 
+    width: 100%;
+    max-width: 600px; 
+    margin: 30px auto;
+
+  }
+  
+  .search-icon {
+    position: absolute; 
+    width: 20px; 
+    height: 20px;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    display: inline-block;
+  }
+  
+  .search-box input {
+    width: 100%; 
+    padding: 10px 10px 10px 40px; 
+    border: 1px solid #dcdcdc; 
+    border-radius: 20px;
+    font-size: 16px; 
+  }
+
+
+  .button {
+    padding: 10px 20px;
+    margin: 20px 4px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  /* Styles pour le texte des langues disponibles */
+  .languages {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .languages a {
+    text-decoration: none;
+    color: #1a0dab;
+    margin-left: 5px;
+  }
+  .voice-search-icon {
+    position: absolute; 
+    width: 30px; 
+    height: 30px;
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+  }
+
+  .search-box .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .search-box:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+
+
+  .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px ;
+  background-color: #f2f2f2;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.footer-top {
+  width: 100%;
+}
+
+.footer-text {
+  text-align: left;
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+  margin-left: 20px; 
+}
+
+.footer-line {
+  border-top: 1px solid #DADCE0;
+  width: 100%; 
+  box-sizing: border-box; 
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.footer-links-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+
+}
+
+.footer-links {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  margin-left: 20px; 
+  margin-right: 20px;
+}
+
+.footer-links li {
+  margin-right: 16px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  margin-left: 9px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Aligner tous les éléments à droite */
+ 
+}
+
+.nav-links {
+  display: flex; 
+
+}
+
+.nav-links a {
+  margin: 8px 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-icons {
+  margin-top: 8px;
+  width: 15px; 
+  height: 15px; 
+  margin-left: 20px;
+margin-right: 20px;}
+
+.login-button {
+  padding: 8px 20px;
+  margin-left: 8px;
+  background-color: #1a73e8; 
+  border: none;
+  border-radius: 4px;
+  color: white; 
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  transition: background-color 0.3s; 
+}
+
+.login-button:hover {
+  background-color: #0f62cd;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width:  768px) {
+    .search-box {
+      max-width: none; /* Permettre à la barre de recherche de se remplir sur les petits écrans */
+    }
+    .search-box input {
+    width: calc(100% - 50px); /* Ajustez la largeur pour les petits écrans */
+    padding: 12px;
+      font-size: 14px;
+  }
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-links-container {
+    flex-direction: column;
+  }
+  
+  .footer-links {
+    margin-bottom: 8px; /* Space between lists when stacked */
+  }
+}
